@@ -1,0 +1,5 @@
+package com.senai.infoa.agenisesi.repositories;
+
+public class MateriaRepository {
+    
+}
