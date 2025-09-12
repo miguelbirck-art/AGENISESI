@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    
+    height: 100vh;
+    background-color: #00679A;
+    flex-direction: column;
+}
+.desfoque {
+    position: absolute;
+    background-color: #0092fa8a;
+    filter: blur(100px);
+    height: 500px;
+    width: 700px;
+    border-radius: 100%;
+    z-index: -2 ;
+    bottom: 100px;
+}
+.titulo {
+    position: relative;
+    width: 90vw;
+    font-family: "Unbounded", sans-serif;
+    color: white;
+    font-size: 150px;
+    background-color: #008BEF;  
+    margin-top: 30px;
+    text-align: center;
+    justify-self: start;
+    border-radius: 30px;
+    padding: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+    font-weight: bold;
+}
+.acessar-login {
+    font-family: "Unbounded", sans-serif;
+    color: white;
+    width: 50%;
+    font-size: 100px;
+    background-color: #008BEF;
+    align-self: flex-start;
+    margin-top: 30px;
+    border-radius: 30px;
+    padding: 20px;
+    font-weight: bold;
+}
+section.a {
+    width: 90vw;
+    display: flex;
+    gap: 20px; 
+}
+a, .p {
+    text-decoration: none;
+    font-family: "Unbounded", sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+.b {
+    background-color: #008BEF;
+    margin: 30px;
+    margin-bottom: 20px;
+    width: 40vw;
+    border-radius: 30px;
+    flex-direction: column;
+    padding: 10px;
+}
+input {
+    display: flex;
+    justify-self: center;
+    height: 70px;
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    padding: 20px;
+    border: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+}
+p.sub {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 30px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.c {
+    margin-top: 0px;
+    width: 40vw;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.aaaa {
+    background-color: #008befea;
+    padding: 20px;
+    border-radius: 30px;
+    width: 50%  ;
+}
+.calendario {
+    display: flex;
+    width: 60vw;
+    height: 100vh;
+    margin-top: 20px;
+    margin-left: 50px; 
+    border: solid;
+    gap: 15px;
+}
+
+.boletim-aluno {
+    background-color: #008BEF;
+    height: 100px;
+    width: 50%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mes {
+    background-color: #008BEF;
+    height: 100px;
+    width: 50%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    justify-content: center;
+}
+p.mestexto {
+    font-family: "Unbounded", sans-serif;
+    color: white;
+    font-size: 50px;
+    margin: 30px;
+    font-weight: bold;
+    display: flex;
+}
+.seta {
+    font-family: "Unbounded", sans-serif;
+    font-size: 70px;
+    color: white;
+    font-weight: bold;
+}
+.container-calendario {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70vw;
+    gap: 15px;
+    margin-top: 30px;
+    transform: translateX(calc(-50vw + 50%));  
+    margin-left: 50px;
+}
+.cabecalho-calendario {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 15px;
+}
+#calendarioemsi {
+    background-color: #008BEF;
+    border-radius: 20px;
+    width: 100%; 
+    height: 500px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
