@@ -38,12 +38,31 @@ body {
     padding-right: 200px;
     font-weight: bold;
 }
+button, a {
+    transition: 0.5s ease-in-out;
+}
+button:hover, a:hover {
+    background-color: #2ea8ff;
+}
 .acessar-login {
     font-family: "Unbounded", sans-serif;
     color: white;
     width: 50%;
     font-size: 100px;
     background-color: #008BEF;
+    align-self: flex-start;
+    margin-top: 30px;
+    border-radius: 30px;
+    padding: 20px;
+    font-weight: bold;
+    transition: 0.5s ease-in-out;
+}
+.acessar-login:hover {
+    font-family: "Unbounded", sans-serif;
+    color: #ffffff;
+    width: 50%;
+    font-size: 100px;
+    background-color: #2ea8ff;
     align-self: flex-start;
     margin-top: 30px;
     border-radius: 30px;
