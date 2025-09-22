@@ -44,6 +44,7 @@ button, a {
     background-color: #008BEF;
     border-radius: 30px;
     transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
+    border: none;
 }
 button:hover, a:hover {
     background-color: #54b8ff;
@@ -117,7 +118,7 @@ p.sub {
 
 .boletim-button {
     height: 100px;
-    width: 25%;
+    width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,12 +126,12 @@ p.sub {
 .mes {
     background-color: #008BEF;
     height: 100px;
-    width: 30%;
+    width: 35%;
     border-radius: 20px;
     display: flex;
     align-items: center;
     padding: 30px;
-    justify-content: center;
+    justify-content: space-between;
 }
 p.mestexto {
     font-family: "Unbounded", sans-serif;
@@ -139,12 +140,19 @@ p.mestexto {
     margin: 30px;
     font-weight: bold;
     display: flex;
+    overflow: hidden;
 }
-.seta {
+.setamais, .setamenos {
     font-family: "Unbounded", sans-serif;
     font-size: 70px;
     color: white;
     font-weight: bold;
+}
+.setamais {
+    justify-self: flex-end;
+}
+.setamenos {
+    justify-self: flex-start;
 }
 .container-calendario {
     display: flex;
@@ -180,6 +188,17 @@ p.mestexto {
     height: 100%;
     width: 100%;
     border-radius: 20px;
+    text-decoration: none;
+    font-family: "Unbounded", sans-serif;
+    color: #008BEF;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
 }
 .voltar-button {
     height: 100px;
