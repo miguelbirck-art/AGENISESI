@@ -45,6 +45,16 @@ button, a {
     border-radius: 30px;
     transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
     border: none;
+    cursor: pointer;
+}
+
+button.aaaa {
+    padding: 20px;
+    border-radius: 30px;
+    width: 50%;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
 }
 button:hover, a:hover {
     background-color: #54b8ff;
@@ -53,11 +63,10 @@ button:hover, a:hover {
 .acessar-login {
     font-family: "Unbounded", sans-serif;
     color: #ffffff;
-    width: 50%;
+    width: calc(50% - 20px);
     font-size: 100px;
     background-color: #008BEF;
     align-self: flex-start;
-    margin-top: 30px;
     border-radius: 30px;
     padding: 20px;
     font-weight: bold;
@@ -65,6 +74,9 @@ button:hover, a:hover {
 section.a {
     width: 90vw;
     display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
     gap: 20px; 
 }
 a, .p {
@@ -95,13 +107,6 @@ input {
     border: 0;
     font-family: "Montserrat", sans-serif;
     font-size: 30px;
-}
-p.sub {
-    font-family: "Montserrat", sans-serif;
-    color: white;
-    font-size: 30px;
-    margin-left: 30px;
-    margin-top: 20px;
 }
 .c {
     margin-top: 0px;
@@ -210,6 +215,7 @@ p.mestexto {
 .inputs {
     height: 100%;
     width: 44%;
+    gap: 30px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -237,7 +243,6 @@ input::placeholder {
 .agendainput {
     border: 10px #008BEF solid;
     height: 100px;
-    margin-bottom: 30px;
 }
 #data-input, #hora-input{
     border: 10px #008BEF solid;
@@ -251,6 +256,24 @@ input::placeholder {
     display: flex;
     justify-content: center;
     gap: 15px; 
+}
+p.sub {
+    justify-self: flex-start;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 30px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+p.sub1 {
+    justify-self: flex-start;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 30px;
+    margin-left: 30px;
+}
+.subdiv {
+    width: 100%;
 }
 canvas {
     position: absolute;
