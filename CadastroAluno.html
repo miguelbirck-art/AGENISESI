@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do Aluno</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo-agenisesi.css">
+</head>
+<body>
+    <div class="desfoque"></div>
+    <div class="titulo">AGENISESI</div>
+    <section class="b">
+        <p class="p">Cadastro do aluno</p>
+        <p class="sub">Nome Completo</p>
+        <input id="nome" placeholder="Nome" type="text">
+        <p class="sub">Pet</p>
+        <input id="pet" placeholder="PET12345678" type="text">
+        <p class="sub">Senha (1 a 8 caractéres)</p>
+        <input id="senha" placeholder="Senha" type="password">
+        <p class="sub">Repetir Senha</p>
+        <input id="confirmarSenha" placeholder="Senha" type="password">
+        
+    </section>
+        <section class="c">
+            <a href="pagina-principal.html" class="aaaa">Voltar</a>
+            <button id="enviar" class="aaaa">Enviar</button>
+        </section>
+<script>
+document.getElementById('enviar').addEventListener('click', async (event) => {
+    event.preventDefault();
+    const nome = document.getElementById('nome').value;
+    const pet = document.getElementById('pet').value;
+    const senha = document.getElementById('senha').value;
+    const confirmarSenha = document.getElementById('confirmarSenha').value;
+    
+    if (senha !== confirmarSenha) {
+        alert('Senhas não coincidem');
+        return;
+    }
+    
+    try {
+        const response = await fetch('https://backend-info1.vercel.app/criarLogin', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                nome: nome,
+                login: pet,
+                senha: senha,
+                tipo: 'aluno'
+            })
+        });
+        
+        if (response.ok) {
+            alert('Cadastro realizado com sucesso!');
+            window.location.href = 'agenda-aluno.html';
+        } else {
+            alert('Erro no cadastro');
+        }
+    } catch (error) {
+        alert('Erro de conexão');
+    }
+});
+</script>
+</body>
+</html>
