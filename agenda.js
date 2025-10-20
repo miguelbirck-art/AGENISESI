@@ -1,5 +1,5 @@
 const dias = [];
-for (let i = 1; i <= 35; i++) {
+for (let i = 1; i <= 42; i++) {
     const diaElement = document.getElementById(`dia${i}`);
     dias.push(diaElement);
 }
