@@ -205,13 +205,6 @@ p.mestexto {
     text-align: center;
 
 }
-.voltar-button {
-    height: 100px;
-    width: 45%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .inputs {
     height: 100%;
     width: 44%;
@@ -316,4 +309,78 @@ canvas {
     align-items: center;
     width: 95%;
     font-size: 50px;
+}
+.boletim {
+    height: auto;
+    background-color: #008BEF;
+    width: 80vw;
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: 1s ease-in-out;
+    flex-direction: column;
+}
+.boletimsub {
+    display: flex;
+    gap: 10px;
+}
+.titulosboletim {
+    margin-right: 4vw;
+    margin-left: 15px;
+    margin-top: 15px;
+    font-family: "Unbounded", sans-serif;
+    color: #003c5a;
+    font-size: 18px;
+}
+.boletimelemento {
+    background-color: #54b8ff;
+    margin: 10px;
+    font-size: 30px;
+    font-family: "Unbounded", sans-serif;
+    color: #003c5a;
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    border-radius: 20px;
+    width: 100%;
+    flex-direction: row;
+    height: 70px;
+}
+.inputboletim {
+    height: 50%;
+    margin: 0;
+    background-color: #a1d8ff;
+    color: #003c5a;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 97%;
+    justify-self: center;
+}
+#tituloboletim {
+    margin-right: 21vw;
+}
+.nomes {
+    width: 36.5%;
+}
+.materias {
+    width: 24%;
+}
+.notas {
+    width: 20%;
+}
+.bodyboletim {
+    flex-direction: row;
+    padding: 15px;
+    padding-top: 0;
+    align-items: flex-start;
+}
+.voltar-buttonb {
+    margin: 15px;
+    height: 100px;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
