@@ -18,31 +18,5 @@
         <a class="acessar-login" href="CadastroAluno.html"><p>Cadastro do Aluno</p></a>
         <a class="acessar-login" href="CadastroProfessor.html"><p>Cadastro do Professor</p></a>
     </section>
-    <canvas id="canva1"></canvas>
-    <canvas id="canva2"></canvas>
-    <canvas id="canva3"></canvas>
-    <!-- estou fazendo o fundo desenhando -->
-    <script>
-        const canva1 = document.getElementById("canvas1");
-        const canva2 = document.getElementById("canvas2");
-        const canva3 = document.getElementById("canvas2");
-        const ctx = canvas1.getContext("2d");
-    
-        let cw = canvas1.width = window.innerWidth;
-        let ch = canvas1.height = window.innerHeight;
-        
-        ctx.beginPath();
-        
-        ctx.moveTo(1300, ch+100); 
-        
-        ctx.bezierCurveTo( 1300, 500, cw-200, 200, cw+100, 200);
-    
-        ctx.strokeStyle = '#E5F4FF';
-        
-        ctx.lineWidth = 75;
-    
-        ctx.stroke();
-    
-        </script>
 </body>
 </html>
