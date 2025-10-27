@@ -352,7 +352,8 @@ input::placeholder {
     font-family: var(--font-unbounded);
     color: var(--dark-blue);
     display: flex;
-    padding-left: 10px;
+    padding-left: 0;
+    justify-content: center;
     align-items: center;
     border-radius: var(--border-radius);
     width: 100%;
@@ -370,7 +371,7 @@ input::placeholder {
     color: var(--dark-blue);
     font-weight: bold;
     border-radius: 10px;
-    width: 97%;
+    width: 90%;
 }
 
 #tituloboletim {
@@ -402,8 +403,8 @@ input::placeholder {
     background-color: transparent;
     border: 10px red solid;
     border-radius: 50%;
-    width: 110px;
-    height: 110px;
+    width: 85%;
+    height: 90%;
     display: block;
 }
 
