@@ -20,7 +20,6 @@ document.getElementById('enviar').addEventListener('click', async (event) => {
         
         if (response.ok) {
             alert('Atividade criada com sucesso!');
-            // Limpar campos
             document.getElementById('nome-atividade').value = '';
             document.getElementById('data-input').value = '';
             document.getElementById('hora-input').value = '';
@@ -31,4 +30,5 @@ document.getElementById('enviar').addEventListener('click', async (event) => {
         console.error('Erro de rede:', error);
         alert('Erro de conexão');
     }
+
 });
