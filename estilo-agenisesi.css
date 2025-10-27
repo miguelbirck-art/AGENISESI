@@ -1,4 +1,5 @@
 :root {
+    /* Define variáveis globais para cores, fontes e bordas */
     --primary-blue: #008BEF;
     --secondary-blue: #54b8ff;
     --light-blue: #a1d8ff;
@@ -17,12 +18,14 @@
 }
 
 * {
+    /* Aplica reset de margens, espaçamentos e define box-sizing para todos os elementos */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    /* Estiliza o corpo da página, define layout flexível e cor de fundo */
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -33,6 +36,7 @@ body {
 }
 
 .desfoque {
+    /* Aplica um efeito de desfoque circular no fundo */
     position: absolute;
     background-color: var(--blur-blue);
     filter: blur(100px);
@@ -44,6 +48,7 @@ body {
 }
 
 .titulo {
+    /* Estiliza o título principal da página */
     position: relative;
     width: 90vw;
     font-family: var(--font-unbounded);
@@ -58,6 +63,7 @@ body {
 }
 
 button, a {
+    /* Estiliza botões e links com aparência consistente */
     font-family: var(--font-unbounded);
     color: var(--white);
     background-color: var(--primary-blue);
@@ -74,11 +80,13 @@ button, a {
 }
 
 button:hover, a:hover {
+    /* Adiciona efeitos ao passar o mouse sobre botões e links */
     background-color: var(--secondary-blue);
     box-shadow: 0px 0px 50px var(--secondary-blue);
 }
 
 .acessar-login {
+    /* Estiliza o botão de login com tamanho maior */
     padding: 20px;
     border-radius: var(--border-radius-large);
     font-size: 100px;
@@ -87,7 +95,8 @@ button:hover, a:hover {
     width: calc(50% - 20px);
 }
 
-.aaaa {
+.aaaa { 
+    /* Estiliza botões genéricos */
     padding: 20px;
     border-radius: var(--border-radius-large);
     font-size: 50px;
@@ -97,6 +106,7 @@ button:hover, a:hover {
 }
 
 section.a {
+    /* Estiliza uma seção com layout flexível e espaçamento entre itens */
     width: 90vw;
     display: flex;
     justify-content: center;
@@ -106,6 +116,7 @@ section.a {
 }
 
 .p {
+    /* Estiliza parágrafos com fonte personalizada e alinhamento central */
     font-family: var(--font-unbounded);
     color: var(--white);
     text-align: center;
@@ -114,6 +125,7 @@ section.a {
 }
 
 .b {
+    /* Estiliza caixas de conteúdo com bordas arredondadas */
     background-color: var(--primary-blue);
     margin: 30px;
     margin-bottom: 20px;
@@ -124,6 +136,7 @@ section.a {
 }
 
 input {
+    /* Estiliza campos de entrada (inputs) com bordas arredondadas e espaçamento interno */
     display: flex;
     height: 70px;
     width: 95%;
@@ -137,6 +150,7 @@ input {
 }
 
 .c {
+    /* Estiliza contêineres com layout flexível e centralização */
     margin-top: 0;
     width: 40vw;
     display: flex;
@@ -145,6 +159,7 @@ input {
 }
 
 .boletim-button, .voltar-button, .voltar-buttonb {
+    /* Estiliza botões específicos com altura e fonte grandes */
     height: 100px;
     display: flex;
     justify-content: center;
@@ -153,12 +168,15 @@ input {
 }
 
 .boletim-button, .voltar-button {
+    /* Define largura específica para botões de boletim e voltar */
     width: 19.4%;
 }
 #voltar-button {
+    /* Define largura específica para o botão de voltar com ID */
     width: 43%;
 }
 .voltar-buttonb {
+    /* Estiliza outro botão de voltar com margens e bordas diferentes */
     width: 45%;
     margin: 15px;
     margin-top: 0;
@@ -167,6 +185,7 @@ input {
 }
 
 .mes {
+    /* Estiliza o cabeçalho do calendário com bordas arredondadas e espaçamento interno */
     background-color: var(--primary-blue);
     height: 100px;
     width: 35%;
@@ -178,6 +197,7 @@ input {
 }
 
 .mestexto {
+    /* Estiliza o texto do mês no calendário */
     font-family: var(--font-unbounded);
     color: var(--white);
     font-size: 50px;
@@ -188,6 +208,7 @@ input {
 }
 
 .setamais, .setamenos {
+    /* Estiliza os botões de navegação do calendário (setas) */
     font-family: var(--font-unbounded);
     font-size: 70px;
     color: var(--white);
@@ -200,6 +221,7 @@ input {
 }
 
 .container-calendario {
+    /* Estiliza o contêiner principal do calendário */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -211,6 +233,7 @@ input {
 }
 
 .cabecalho-calendario {
+    /* Estiliza o cabeçalho do calendário */
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -218,6 +241,7 @@ input {
 }
 
 #calendarioemsi {
+    /* Estiliza a grade do calendário */
     background-color: var(--primary-blue);
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
@@ -232,6 +256,7 @@ input {
 }
 
 .dia {
+    /* Estiliza os dias individuais do calendário */
     background-color: var(--white);
     height: 100%;
     width: 100%;
@@ -248,6 +273,7 @@ input {
 }
 
 .inputs {
+    /* Estiliza o contêiner de inputs */
     height: 100%;
     width: 44%;
     gap: 30px;
@@ -256,6 +282,7 @@ input {
 }
 
 .container-calendario2, .container-calendario2a {
+    /* Estiliza contêineres adicionais do calendário */
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -265,35 +292,42 @@ input {
 }
 
 .container-calendario2 {
+    /* Centraliza o contêiner do calendário */
     justify-content: center;
 }
 
 .container-calendario2a {
+    /* Alinha o contêiner do calendário à esquerda */
     justify-content: flex-start;
 }
 
 input::placeholder {
+    /* Estiliza o texto placeholder dos inputs */
     color: var(--gray);
 }
 
 .agendainput, #data-input, #hora-input {
+    /* Estiliza inputs específicos com bordas e altura maiores */
     border: 10px var(--primary-blue) solid;
     height: 100px;
 }
 
 #data-input, #hora-input {
+    /* Define largura e margens para inputs de data e hora */
     width: 46%;
     margin-bottom: 30px;
     color: var(--gray);
 }
 
 .dataetempo {
+    /* Estiliza o contêiner de data e hora */
     display: flex;
     justify-content: center;
     gap: 15px;
 }
 
 .sub, .sub1 {
+    /* Estiliza subtítulos com margens e fonte personalizada */
     justify-self: flex-start;
     font-family: var(--font-montserrat);
     color: var(--white);
@@ -302,14 +336,17 @@ input::placeholder {
 }
 
 .sub {
+    /* Adiciona margem superior ao subtítulo */
     margin-top: 20px;
 }
 
 .subdiv {
+    /* Estiliza divisões de subtítulos */
     width: 100%;
 }
 
 .enviaratividade {
+    /* Estiliza o botão de envio de atividades */
     height: 100px;
     border: 0;
     justify-content: center;
@@ -321,6 +358,7 @@ input::placeholder {
 }
 
 .boletim {
+    /* Estiliza o contêiner do boletim */
     height: auto;
     background-color: var(--primary-blue);
     width: 80vw;
@@ -334,11 +372,13 @@ input::placeholder {
 }
 
 .boletimsub {
+    /* Estiliza subcontêineres do boletim */
     display: flex;
     gap: 10px;
 }
 
 .titulosboletim {
+    /* Estiliza os títulos do boletim */
     margin: 15px 4vw 0 15px;
     font-family: var(--font-unbounded);
     color: var(--dark-blue);
@@ -346,6 +386,7 @@ input::placeholder {
 }
 
 .boletimelemento {
+    /* Estiliza os elementos individuais do boletim */
     background-color: var(--secondary-blue);
     margin: 10px;
     font-size: 30px;
@@ -361,36 +402,43 @@ input::placeholder {
 }
 
 .boletimelemento1 {
+    /* Adiciona espaçamento interno ao primeiro elemento do boletim */
     padding-left: 15px;
 }
 
 .inputboletim {
+    /* Estiliza inputs dentro do boletim */
     height: 50%;
     margin: 0;
     background-color: var(--light-blue);
-    color: var(--dark-blue);
+    color: var (--dark-blue);
     font-weight: bold;
     border-radius: 10px;
     width: 90%;
 }
 
 #tituloboletim {
+    /* Define margem para o título do boletim */
     margin-right: 21vw;
 }
 
 .nomes {
+    /* Define largura para a coluna de nomes no boletim */
     width: 36.5%;
 }
 
 .materias {
+    /* Define largura para a coluna de matérias no boletim */
     width: 24%;
 }
 
 .notas {
+    /* Define largura para a coluna de notas no boletim */
     width: 20%;
 }
 
 .bodyboletim {
+    /* Estiliza o corpo do boletim com layout flexível */
     flex-direction: row;
     padding: 15px;
     padding-top: 0;
@@ -398,6 +446,7 @@ input::placeholder {
 }
 
 .tarefa {
+    /* Estiliza o indicador de tarefa no calendário */
     z-index: 1;
     position: absolute;
     background-color: transparent;
@@ -409,6 +458,7 @@ input::placeholder {
 }
 
 .tarefadiv {
+    /* Estiliza o contêiner de detalhes da tarefa */
     z-index: 2;
     position: absolute;
     border: 10px var(--primary-blue) solid;
@@ -423,10 +473,12 @@ input::placeholder {
 }
 
 .nomeatividadediv, .dataatividadediv, .horaatividadedix {
+    /* Estiliza divisões de nome, data e hora das atividades */
     font-size: 43%;
 }
 
 .divisaodiv {
+    /* Estiliza uma linha divisória */
     height: 5px;
     width: 90%;
     background-color: var(--primary-blue);
