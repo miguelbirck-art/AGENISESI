@@ -15,36 +15,28 @@ let mesatual = new Date().getMonth() + 1;
 
 function atualizarCalendario() {
     const anoatual = new Date().getFullYear();
-    const primeirodia = new Date(anoatual, mesatual - 1, 1);
-    const primeirodias = primeirodia.getDay();
+    const primeirodia = new Date(anoatual, mesatual - 1, 1).getDay();
     const ultimodia = new Date(anoatual, mesatual, 0).getDate();
     const ultimodiaanterior = new Date(anoatual, mesatual - 1, 0).getDate();
     const diaNumeros = [];
 
-    dias.forEach(dia => {
-        const tarefaElement = dia.querySelector('.tarefa');
-        dia.textContent = "";
-        if (tarefaElement) dia.appendChild(tarefaElement);
-        dia.style.color = "var(--primary-blue)";
-    });
-
-    for (let i = 0; i < primeirodias; i++) {
-        const diaNumero = ultimodiaanterior - primeirodias + i + 1;
+    for (let i = 0; i < primeirodia; i++) {
+        const diaNumero = ultimodiaanterior - primeirodia + i + 1;
         dias[i].textContent = diaNumero;
         dias[i].style.color = "var(--faded-blue)";
         diaNumeros.push(diaNumero);
     }
 
     for (let i = 0; i < ultimodia; i++) {
-        const diaIndex = primeirodias + i;
+        const diaIndex = primeirodia + i;
         if (diaIndex < dias.length) {
             dias[diaIndex].textContent = i + 1;
             dias[diaIndex].style.color = "var(--primary-blue)";
         }
     }
 
-    for (let i = primeirodias + ultimodia; i < dias.length; i++) {
-        dias[i].textContent = i - primeirodias - ultimodia + 1;
+    for (let i = primeirodia + ultimodia; i < dias.length; i++) {
+        dias[i].textContent = i - primeirodia - ultimodia + 1;
         dias[i].style.color = "var(--faded-blue)";
     }
 
@@ -59,12 +51,10 @@ async function carregarTarefas(anoatual, diasAnteriores) {
         
         document.querySelectorAll('.tarefa').forEach(tarefa => tarefa.remove());
         
-        tarefas
-            .filter(tarefa => {
+        tarefas.filter(tarefa => {
                 const [, mes, ano] = tarefa.data.split('/');
                 return parseInt(mes) === mesatual && parseInt(ano) === anoatual;
-            })
-            .forEach(tarefa => {
+            }).forEach(tarefa => {
                 const [dia] = tarefa.data.split('/');
                 const diaElement = document.getElementById(`dia${parseInt(dia) + diasAnteriores}`);
                 
@@ -73,28 +63,39 @@ async function carregarTarefas(anoatual, diasAnteriores) {
                     circulo.classList.add('tarefa');
                     diaElement.appendChild(circulo);
                     
-                    let tooltipTimeout;
+                    let tarefadivTimeout;
                     
-                    circulo.addEventListener('mouseenter', () => {
-                        tooltipTimeout = setTimeout(() => {
-                            const tooltip = document.createElement('div');
-                            tooltip.classList.add('tarefadiv');
-                            tooltip.innerHTML = `
-                                <h3 class="nomeatividadediv">${tarefa.nome}</h3>
-                                <div class="divisaodiv"></div>
-                                <h3 class="dataatividadediv">${tarefa.data}</h3>
-                                <div class="divisaodiv"></div>
-                                <h3 class="horaatividadedix">${tarefa.horario}</h3>
-                            `;
-                            circulo.parentElement.appendChild(tooltip);
-                        }, 300);
-                    });
+                    const mostrarTarefadiv = () => {
+                        clearTimeout(tarefadivTimeout);
+                        if (!diaElement.querySelector('.tarefadiv')) {
+                            tarefadivTimeout = setTimeout(() => {
+                                const tarefadiv = document.createElement('div');
+                                tarefadiv.classList.add('tarefadiv');
+                                tarefadiv.innerHTML = `
+                                    <h3 class="nomeatividadediv">${tarefa.nome}</h3>
+                                    <div class="divisaodiv"></div>
+                                    <h3 class="dataatividadediv">${tarefa.data}</h3>
+                                    <div class="divisaodiv"></div>
+                                    <h3 class="horaatividadedix">${tarefa.horario}</h3>
+                                `;
+                                diaElement.appendChild(tarefadiv);
+                                
+                                tarefadiv.addEventListener('mouseenter', mostrarTarefadiv);
+                                tarefadiv.addEventListener('mouseleave', esconderTarefadiv);
+                            }, 200);
+                        }
+                    };
                     
-                    circulo.addEventListener('mouseleave', () => {
-                        clearTimeout(tooltipTimeout);
-                        const tooltip = circulo.parentElement.querySelector('.tarefadiv');
-                        if (tooltip) tooltip.remove();
-                    });
+                    const esconderTarefadiv = () => {
+                        clearTimeout(tarefadivTimeout);
+                        tarefadivTimeout = setTimeout(() => {
+                            const tarefadiv = diaElement.querySelector('.tarefadiv');
+                            if (tarefadiv) tarefadiv.remove();
+                        }, 100);
+                    };
+                    
+                    circulo.addEventListener('mouseenter', mostrarTarefadiv);
+                    circulo.addEventListener('mouseleave', esconderTarefadiv);
                 }
             });
     } catch (error) {
